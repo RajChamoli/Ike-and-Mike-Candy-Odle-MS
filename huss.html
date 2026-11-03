@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!---Inspired by Anirudh Godavarthy.--->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>13 Most Important Forms of Hussing</title>
+    <title>110 Forms of Hussing - Enhanced Pure HTML & CSS Matrix</title>
     <style>
         /* Base Dark Mode Setup */
         body {
@@ -30,8 +29,47 @@
             text-align: center;
             color: #888;
             max-width: 700px;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
             line-height: 1.6;
+        }
+
+        /* --- NEW PURE CSS GRAPHICS / WAVEFORM SIMULATOR --- */
+        .header-graphic {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 6px;
+            height: 60px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 40px;
+            padding: 10px;
+            border-bottom: 1px dashed #222;
+        }
+
+        .wave-bar {
+            width: 8px;
+            background: linear-gradient(0deg, #005544, #00ffcc);
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+            animation: pulseWave 1.8s infinite ease-in-out alternate;
+        }
+
+        /* Stagger bars to look like a true real-time sinus audio track */
+        .wave-bar:nth-child(1)  { height: 20%; animation-delay: 0.1s; }
+        .wave-bar:nth-child(2)  { height: 50%; animation-delay: 0.4s; }
+        .wave-bar:nth-child(3)  { height: 80%; animation-delay: 0.2s; }
+        .wave-bar:nth-child(4)  { height: 40%; animation-delay: 0.6s; }
+        .wave-bar:nth-child(5)  { height: 95%; animation-delay: 0.3s; }
+        .wave-bar:nth-child(6)  { height: 60%; animation-delay: 0.7s; }
+        .wave-bar:nth-child(7)  { height: 30%; animation-delay: 0.1s; }
+        .wave-bar:nth-child(8)  { height: 85%; animation-delay: 0.5s; }
+        .wave-bar:nth-child(9)  { height: 45%; animation-delay: 0.2s; }
+        .wave-bar:nth-child(10) { height: 75%; animation-delay: 0.8s; }
+
+        @keyframes pulseWave {
+            0% { transform: scaleY(0.4); opacity: 0.5; }
+            100% { transform: scaleY(1.1); opacity: 1; filter: hue-rotate(90deg); }
         }
 
         /* Responsive CSS Grid Container */
@@ -50,13 +88,27 @@
             border-radius: 12px;
             padding: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative Vector lung indicator line on the edge of cards */
+        .huss-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #00ffcc;
+            box-shadow: 0 0 10px #00ffcc;
         }
 
         /* INTENSE GLOWING TEXT VIA KEYFRAMES */
         .huss-title {
             font-size: 1.25rem;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
             animation: intenseGlow 2.5s infinite ease-in-out;
@@ -68,6 +120,27 @@
             margin-right: 8px;
             text-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
         }
+
+        /* Inline Graphic Badges */
+        .pace-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background-color: #141416;
+            border: 1px solid #2d2d30;
+        }
+        
+        .tag-steady   { color: #00ffcc; border-color: rgba(0, 255, 204, 0.3); }
+        .tag-interval { color: #ffcc00; border-color: rgba(255, 206, 0, 0.3); }
+        .tag-tempo    { color: #ff00ff; border-color: rgba(255, 0, 255, 0.3); }
+        .tag-sprint   { color: #ff3333; border-color: rgba(255, 51, 51, 0.3); }
+        .tag-recovery { color: #0099ff; border-color: rgba(0, 153, 255, 0.3); }
+        .tag-hypoxic  { color: #9933ff; border-color: rgba(153, 51, 255, 0.3); }
 
         /* Bullet Descriptions */
         .specs-list {
@@ -112,21 +185,176 @@
                 text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px rgba(0, 255, 204, 0.4);
             }
         }
+ .huss-mechanics-container {
+            background-color: #0b0b0c;
+            border: 1px solid #1a1a1c;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .huss-stage {
+            width: 100%;
+            height: 220px;
+            position: relative;
+            background-color: #000000;
+            border-radius: 8px;
+            border: 1px dashed #222;
+            overflow: hidden;
+        }
+        .stick-figure {
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 140px;
+            animation: thoracicBob 0.6s infinite ease-in-out alternate;
+        }
+        .stick-head {
+            width: 22px;
+            height: 22px;
+            border: 3px solid #00ffcc;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 36px;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+        }
+        .stick-torso {
+            width: 4px;
+            height: 50px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 25px;
+            left: 45px;
+        }
+        .shoulder-point {
+            width: 16px;
+            height: 4px;
+            background-color: #00ffcc;
+            position: absolute;
+            top: 0;
+            left: -6px;
+        }
+        .pelvis-point {
+            width: 12px;
+            height: 4px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 75px;
+            left: 41px;
+        }
+        .arm-left, .arm-right {
+            width: 4px;
+            height: 26px;
+            background-color: #00ffcc;
+            position: absolute;
+            top: 2px;
+            transform-origin: top center;
+            box-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+        }
+        .arm-left {
+            left: 43px;
+            animation: armSwingLeft 0.6s infinite linear;
+        }
+        .arm-right {
+            left: 47px;
+            animation: armSwingRight 0.6s infinite linear;
+        }
+        .leg-left, .leg-right {
+            width: 4px;
+            height: 35px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 77px;
+            transform-origin: top center;
+        }
+        .leg-left {
+            left: 42px;
+            animation: legCycleLeft 0.6s infinite linear;
+        }
+        .leg-right {
+            left: 46px;
+            animation: legCycleRight 0.6s infinite linear;
+        }
+        .ground-vector {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #222, transparent);
+        }
+        .graphics-legend {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #777;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .graphics-legend strong {
+            color: #00ffcc;
+        }
+        @keyframes thoracicBob {
+            0% { transform: translateX(-50%) translateY(0px); }
+            100% { transform: translateX(-50%) translateY(4px); }
+        }
+        @keyframes armSwingLeft {
+            0% { transform: rotate(35deg); }
+            50% { transform: rotate(-45deg); }
+            100% { transform: rotate(35deg); }
+        }
+        @keyframes armSwingRight {
+            0% { transform: rotate(-45deg); }
+            50% { transform: rotate(35deg); }
+            100% { transform: rotate(-45deg); }
+        }
+        @keyframes legCycleLeft {
+            0% { transform: rotate(-40deg) scaleY(0.9); }
+            50% { transform: rotate(30deg) scaleY(1.1); }
+            100% { transform: rotate(-40deg) scaleY(0.9); }
+        }
+        @keyframes legCycleRight {
+            0% { transform: rotate(30deg) scaleY(1.1); }
+            50% { transform: rotate(-40deg) scaleY(0.9); }
+            100% { transform: rotate(30deg) scaleY(1.1); }
+        }
     </style>
 </head>
 <body>
 
     <h1>THE HUSSING BREATHING MATRIX</h1>
     <div class="subtitle">
-        A complete 13-form technical directory of Hussing/Huffing pacing patterns. Optimized entirely via native CSS for environments with strict scripts disabled, as JavaScript may be blocked.
+        A complete 13-form technical directory of Hussing patterns. Optimized entirely via native CSS for environments with strict scripts disabled.
     </div>
-	<p><b>You must say "HUSS!" repeatedly and consecutively, to do actual hussing.</b></p>
-	<br><br>
-    <div class="matrix-container">
+<br>
+<p> "You must say <b>"HUSS!"</b> continuously, all at once, as fast as you can to actually huss. Else, you're just a <b>WANNABEE</b> husser who doesn't know how to huss." <br>                           							- Raj Chamoli, 2026</p>
 
+    <!-- PURE CSS GRAPHIC SIMULATOR -->
+    <div class="header-graphic">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+    </div>
+
+    <div class="matrix-container">
         <!-- GROUP 1: STEADY STATE PACE VARIATIONS -->
         <div class="huss-card">
             <div class="huss-title"><span class="huss-num">#001</span>Linear Steady State Huss</div>
+            <div class="pace-tag tag-steady">Steady State</div>
             <ul class="specs-list">
                 <li><strong>Body Movement:</strong> Executed strictly in cadence with even footstrikes. Arm drive syncs at a 90-degree angle.</li>
                 <li><strong>Breathing Pattern:</strong> Nasal intake on stride recovery. Exhalation relies on two deep micro-bursts.</li>
@@ -134,6 +362,7 @@
         </div>
         <div class="huss-card">
             <div class="huss-title"><span class="huss-num">#002</span>Bilateral Steady State Huss</div>
+            <div class="pace-tag tag-steady">Steady State</div>
             <ul class="specs-list">
                 <li><strong>Body Movement:</strong> Alternate core bracing on left and right footstrikes to distribute muscular load evenly.</li>
                 <li><strong>Breathing Pattern:</strong> Balanced 3:3 inhale-to-exhale rhythm matching the rhythmic torso rotation.</li>
@@ -141,6 +370,7 @@
         </div>
         <div class="huss-card">
             <div class="huss-title"><span class="huss-num">#003</span>Segmented Steady State Huss</div>
+            <div class="pace-tag tag-steady">Steady State</div>
             <ul class="specs-list">
                 <li><strong>Body Movement:</strong> Spine held perfectly erect, minimizing shoulder shrugging during long endurance phases.</li>
                 <li><strong>Breathing Pattern:</strong> Double-snort air intake followed by three rapid, open-glottis vocal puffs.</li>
@@ -148,6 +378,7 @@
         </div>
         <div class="huss-card">
             <div class="huss-title"><span class="huss-num">#004</span>Cascading Steady State Huss</div>
+            <div class="pace-tag tag-steady">Steady State</div>
             <ul class="specs-list">
                 <li><strong>Body Movement:</strong> Fluid, relaxed movement dropping all tension from the traps and upper neck muscles.</li>
                 <li><strong>Breathing Pattern:</strong> Stepwise exhalations where each huff deflates the lungs slightly more than the last.</li>
@@ -155,66 +386,19 @@
         </div>
         <div class="huss-card">
             <div class="huss-title"><span class="huss-num">#005</span>Compressed Steady State Huss</div>
+            <div class="pace-tag tag-steady">Steady State</div>
             <ul class="specs-list">
                 <li><strong>Body Movement:</strong> Compact arm carriage tight to the ribcage, maximizing forward pelvic driving power.</li>
                 <li><strong>Breathing Pattern:</strong> Short, ultra-dense sharp air pushes synced directly to high-cadence steps.</li>
             </ul>
         </div>
         <div class="huss-card">
-            <div class="huss-title"><span class="huss-num">#006</span>Staccato Steady State Huss</div>
+            <div class="huss-title"><span class="huss-num">#006</span>Tibetian Monk Agility Huss</div>
+            <div class="pace-tag tag-steady">Agility State</div>
             <ul class="specs-list">
-                <li><strong>Body Movement:</strong> Sharp, crisp steps with a high-frequency turnover while maintaining low chest rise.</li>
-                <li><strong>Breathing Pattern:</strong> Short, percussive vocalizations mimicking a mechanical, repeating release valve.</li>
-            </ul>
-        </div>
-        <div class="huss-card">
-            <div class="huss-title"><span class="huss-num">#007</span>Resonant Steady State Huss</div>
-            <ul class="specs-list">
-                <li><strong>Body Movement:</strong> Deep thoracic opening, dropping the hip line slightly for deep center-of-gravity stabilization.</li>
-                <li><strong>Breathing Pattern:</strong> Lower-register vocalized sound emphasizing deep vocal cord vibration on release.</li>
-            </ul>
-        </div>
-        <div class="huss-card">
-            <div class="huss-title"><span class="huss-num">#008</span>Diaphragmatic Steady State Huss</div>
-            <ul class="specs-list">
-                <li><strong>Body Movement:</strong> Total restriction of clavicular chest breathing, driving movement via lower belly expansion.</li>
-                <li><strong>Breathing Pattern:</strong> Deep expansion followed by explosive core contractions forcing the air out fast.</li>
-            </ul>
-        </div>
-        <div class="huss-card">
-            <div class="huss-title"><span class="huss-num">#009</span>Forced-Air Steady State Huss</div>
-            <ul class="specs-list">
-                <li><strong>Body Movement:</strong> Heavy power-walking or climbing carriage with a slight forward-leaning posture.</li>
-                <li><strong>Breathing Pattern:</strong> Over-pressurizing the lungs on intake, followed by an aggressive, audible air purge.</li>
-            </ul>
-        </div>
-        <div class="huss-card">
-            <div class="huss-title"><span class="huss-num">010</span>Intermittent Steady State Huss</div>
-            <ul class="specs-list">
-                <li><strong>Body Movement:</strong> Periodic relaxing of the hands and jaw every ten strides to break muscle lock.</li>
-                <li><strong>Breathing Pattern:</strong> Cycling between normal quiet breathing and sudden, structured hussing blocks.</li>
+                <li><strong>Body Movement:</strong> Folding your hands together, while running in a straight line as fast as possible. </li>
+                <li><strong>Breathing Pattern:</strong> Stepwise exhalations at same intensity.</li>
             </ul>
         </div>
 
-        <!-- GROUP 2: INTERVAL PACE VARIATIONS -->
-        <div class="huss-card">
-            <div class="huss-title"><span class="huss-num">#011</span>Linear Interval Huss</div>
-            <ul class="specs-list">
-                <li><strong>Body Movement:</strong> Transitions smoothly from low-intensity shuffle to aggressive upright acceleration strides.</li>
-                <li><strong>Breathing Pattern:</strong> Linear ramp-up of exhalation pressure matching the increasing velocity curve.</li>
-            </ul>
-        </div>
-        <div class="huss-card">
-            <div class="huss-title"><span class="huss-num">#012</span>Bilateral Interval Huss</div>
-            <ul class="specs-list">
-                <li><strong>Body Movement:</strong> Shifting weight side-to-side dynamically while handling rapid cornering or changes of direction.</li>
-                <li><strong>Breathing Pattern:</strong> Mirroring breath swaps on every directional change to optimize lateral core support.</li>
-            </ul>
-        </div>
-        <div class="huss-card">
-            <div class="huss-title"><span class="huss-num">#013</span>Segmented Interval Huss</div>
-            <ul class="specs-list">
-                <li><strong>Body Movement:</strong> Breaking the acceleration curve into distinct zones (drive phase, float phase, deceleration).</li>
-                <li><strong>Breathing Pattern:</strong> Quick pulses during drive phase, switching to long flowing releases while floating.</li>
-            </ul>
-        </div>
+
